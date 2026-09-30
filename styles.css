@@ -1,0 +1,23 @@
+:root { --bg:#f3f6f4; --ink:#14251f; --muted:#5c6f67; --card:#fff; --line:#d9e2dd;
+  --green:#1f7a4d; --red:#b3372b; --amber:#c98a12; }
+* { box-sizing: border-box; }
+body { margin:0; font-family:"Segoe UI",system-ui,sans-serif; background:var(--bg); color:var(--ink); }
+.wrap { max-width:1000px; margin:0 auto; padding:24px 16px; }
+header { display:flex; justify-content:space-between; align-items:center; margin-bottom:20px; }
+h1,h2,h3 { margin:0 0 8px; }
+.grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:16px; }
+.card { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:18px; }
+.score { font-size:64px; font-weight:700; line-height:1; }
+.badge { display:inline-block; padding:3px 10px; border-radius:99px; color:#fff; font-size:13px; margin-left:8px; }
+.Excellent,.Good { background:var(--green); } .Fair { background:var(--amber); } .Poor { background:var(--red); }
+.up { color:var(--green); } .down { color:var(--red); }
+input { width:100%; padding:9px; margin:4px 0 12px; border:1px solid var(--line); border-radius:6px; font-size:15px; }
+label { font-size:13px; color:var(--muted); }
+button { background:var(--green); color:#fff; border:0; padding:10px 16px; border-radius:6px; cursor:pointer; font-size:15px; }
+button.ghost { background:transparent; color:var(--ink); border:1px solid var(--line); }
+button:disabled { opacity:.6; cursor:wait; }
+button:focus-visible,input:focus-visible { outline:2px solid var(--green); outline-offset:2px; }
+.chip { display:inline-block; background:#fbeae8; color:var(--red); padding:4px 10px; border-radius:99px; font-size:13px; margin:0 6px 6px 0; }
+.err { color:var(--red); font-size:14px; } .note { color:var(--muted); font-size:12px; }
+ol li { margin-bottom:8px; }
+.full { grid-column:1/-1; }
